@@ -65,38 +65,19 @@ sap.ui.define([
     onAfterRendering: function() {
       // Get the context of the canvas element we want to select
       var ctx = document.getElementById(CHART_CANVAS_NAME_PREFIX + this.getId()).getContext("2d");
-      this._newCustomChart = new Chart(ctx);
-      var chartType = this.getChartType();
-      var chartData = this.getData();
-      var chartOptions = this.getOptions();
+      
 
-      // required due to lifecycle calls > init of undefined vars
-      if(chartData === undefined) {
-        return;
-      }
+      	var chartType = this.getChartType().toLowerCase();
+      	var chartData = this.getData();
+      	var chartOptions = this.getOptions();
+	this._newCustomChart = new Chart(ctx, {
+    type: chartType,
+                data: chartData,
+                options: chartOptions
 
-      switch (chartType) {
-        case 'Line':
-          this._newCustomChart.Line(chartData, chartOptions);
-          break;
-        case 'Bar':
-          this._newCustomChart.Bar(chartData, chartOptions);
-          break;
-        case 'Radar':
-          this._newCustomChart.Radar(chartData, chartOptions);
-          break;
-        case 'PolarArea':
-          this._newCustomChart.PolarArea(chartData, chartOptions);
-          break;
-        case 'Pie':
-          this._newCustomChart.Pie(chartData, chartOptions);
-          break;
-        case 'Doughnut':
-          this._newCustomChart.Doughnut(chartData, chartOptions);
-          break;
-        default:
-          throw new Error('Error while creating ChartJS: Undefined chartType: ' + chartType);
-      }
+});
+
+
     },
 
     exit: function() {
