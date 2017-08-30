@@ -65,9 +65,9 @@ sap.ui.define([
     onAfterRendering: function() {
       // Get the context of the canvas element we want to select
       var ctx = document.getElementById(CHART_CANVAS_NAME_PREFIX + this.getId()).getContext("2d");
-      
 
-      	var chartType = this.getChartType().toLowerCase();
+
+      	var chartType = this.getChartType().charAt(0).toLowerCase() + this.getChartType().slice(1);
       	var chartData = this.getData();
       	var chartOptions = this.getOptions();
 	this._newCustomChart = new Chart(ctx, {
