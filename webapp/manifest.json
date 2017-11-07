@@ -20,10 +20,10 @@
   },
   "sap.ui5": {
     "rootView": {
-      viewName: "agraebe.custom.view.App",
-      type: "XML",
-      async: true,
-      id: "app"
+      "viewName": "agraebe.custom.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
     },
     "dependencies": {
       "minUI5Version": "1.30",
