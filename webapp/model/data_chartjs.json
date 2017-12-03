@@ -61,46 +61,26 @@
       "data": [28, 48, 40, 19, 96, 27, 100]
     }]
   },
-  "polarData": [{
-    "value": 300,
-    "color": "#F7464A",
-    "highlight": "#FF5A5E",
-    "label": "Red"
-  }, {
-    "value": 50,
-    "color": "#46BFBD",
-    "highlight": "#5AD3D1",
-    "label": "Green"
-  }, {
-    "value": 100,
-    "color": "#FDB45C",
-    "highlight": "#FFC870",
-    "label": "Yellow"
-  }, {
-    "value": 40,
-    "color": "#949FB1",
-    "highlight": "#A8B3C5",
-    "label": "Grey"
-  }, {
-    "value": 120,
-    "color": "#4D5360",
-    "highlight": "#616774",
-    "label": "Dark Grey"
-  }],
-  "pieData": [{
-    "value": 300,
-    "color": "#F7464A",
-    "highlight": "#FF5A5E",
-    "label": "Red"
-  }, {
-    "value": 50,
-    "color": "#46BFBD",
-    "highlight": "#5AD3D1",
-    "label": "Green"
-  }, {
-    "value": 100,
-    "color": "#FDB45C",
-    "highlight": "#FFC870",
-    "label": "Yellow"
-  }]
+  "polarData": {
+    "datasets":[
+      {"label":"My First Dataset","data":[11,16,7,3,14],"backgroundColor":["rgb(255, 99, 132)","rgb(75, 192, 192)","rgb(255, 205, 86)","rgb(201, 203, 207)","rgb(54, 162, 235)"]}
+    ],
+    "labels":[
+      "Red",
+      "Green",
+      "Yellow",
+      "Grey",
+      "Blue"
+    ]
+  },
+  "pieData": {
+    "datasets":[
+      {"label":"My First Dataset","data":[300,50,100],"backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]}
+    ],
+    "labels": [
+      "Red",
+      "Blue",
+      "Yellow"
+    ]
+  }
 }
